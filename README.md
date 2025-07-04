@@ -2,7 +2,7 @@
 
 Đây là một dự án ứng dụng web front-end nhằm mô phỏng một hệ thống hỗ trợ khách hàng cho Vietnam Post. Ứng dụng cung cấp các công cụ tương tác giúp người dùng dễ dàng tìm kiếm thông tin, định vị bưu cục, xem hướng dẫn và nhận giải đáp thắc mắc.
 
-**🔗 Link Demo trực tiếp:** [https://vietnam-post-support.netlify.app/](https://vietnam-post-support.netlify.app/) _(Lưu ý: Tính năng GPS yêu cầu cấp quyền vị trí trên trình duyệt)_
+**🔗 Link Demo trực tiếp:**https://stephensouth13.github.io/Web_App_Vietnam-Post/  _(Lưu ý: Tính năng GPS yêu cầu cấp quyền vị trí trên trình duyệt)_
 
 ![image](https://github.com/user-attachments/assets/df7c4512-a253-4be6-9249-94a7a1422578)
 

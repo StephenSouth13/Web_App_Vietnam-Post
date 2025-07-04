@@ -1,0 +1,21 @@
+.video-page-container { max-width: 900px; margin: auto; }
+.page-header { text-align: center; margin-bottom: 2rem; }
+.page-header h1 { color: var(--primary-color); }
+.tab-nav { display: flex; border-bottom: 2px solid var(--border-color); margin-bottom: 2rem; }
+.tab-link { padding: 12px 25px; cursor: pointer; background: none; border: none; font-size: 1.1rem; font-family: var(--font-family); font-weight: 500; color: #666; position: relative; top: 2px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+.tab-link:hover { color: var(--primary-color); }
+.tab-link.active { color: var(--primary-color); font-weight: 700; border-bottom-color: var(--primary-color); }
+.tab-link i { margin-right: 8px; }
+.tab-content { display: none; animation: fadeIn 0.5s ease; }
+.tab-content.active { display: block; }
+.tab-content h3 { font-size: 1.5rem; color: var(--text-color); margin-bottom: 1rem; }
+.tab-content p { margin-bottom: 1.5rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+    .tab-nav { flex-direction: column; border-bottom: none; }
+    .tab-link { border-bottom: 1px solid var(--border-color); width: 100%; text-align: left; }
+    .tab-link.active { border-bottom-color: var(--primary-color); background-color: var(--light-gray-color); }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỏi đáp AI - Vietnam Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Trợ lý ảo Vietnam Post</h2>
+                <p>Tôi có thể giúp gì cho bạn?</p>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="suggested-questions">
+                <button class="suggestion-btn">Gửi hàng có pin thì sao?</button>
+                <button class="suggestion-btn">Kiểm tra mã vận đơn</button>
+                <button class="suggestion-btn">Thời gian làm việc?</button>
+            </div>
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="chat-input" placeholder="Nhập câu hỏi của bạn..." autocomplete="off">
+                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/chat.js" defer></script>
+</body>
+</html>

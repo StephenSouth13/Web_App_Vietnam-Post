@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ chi nhánh - Vietnam Post</title>
+    <!-- Thư viện Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <!-- Thư viện chỉ đường (MỚI) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <div class="container map-page-container">
+            <div class="page-header">
+                <h1>Tìm đường đến Bưu cục Vietnam Post</h1>
+                <p id="map-instruction">Vui lòng cấp quyền truy cập vị trí để chúng tôi có thể tìm đường đi cho bạn.</p>
+                <div class="legend">
+                    <span><i class="fas fa-map-marker-alt" style="color: blue;"></i> Vị trí của bạn</span>
+                    <span><span class="dot green"></span> Vắng</span>
+                    <span><span class="dot yellow"></span> Trung bình</span>
+                    <span><span class="dot red"></span> Đông</span>
+                </div>
+            </div>
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Thư viện Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Thư viện chỉ đường (MỚI) -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.min.js"></script>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/map.js" defer></script>
+</body>
+</html>

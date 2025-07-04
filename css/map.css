@@ -1,0 +1,27 @@
+.map-page-container { text-align: center; }
+.page-header { margin-bottom: 2rem; }
+.page-header h1 { color: var(--primary-color); margin-bottom: 0.5rem; }
+.legend { margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 20px; font-weight: 500; }
+.legend .dot { height: 15px; width: 15px; border-radius: 50%; display: inline-block; margin-right: 5px; border: 1px solid rgba(0,0,0,0.2); }
+.legend .green { background-color: #28a745; }
+.legend .yellow { background-color: #ffc107; }
+.legend .red { background-color: #dc3545; }
+#map-container { width: 100%; height: 60vh; min-height: 450px; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); overflow: hidden; }
+#map { height: 100%; width: 100%; }
+/* Style cho nút chỉ đường trong popup */
+.route-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.route-button:hover {
+    background-color: #005a9e;
+}

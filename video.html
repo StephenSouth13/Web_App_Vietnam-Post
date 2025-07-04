@@ -1,0 +1,83 @@
+<!-- /vietnam-post/video.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn đóng gói - Vietnam Post</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- CSS Riêng -->
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <div class="container video-page-container">
+            <div class="page-header">
+                <h1>Thư viện Video Hướng dẫn</h1>
+                <p>Học cách đóng gói hàng hóa đúng quy chuẩn để đảm bảo an toàn trong quá trình vận chuyển.</p>
+            </div>
+            
+            <div class="tab-nav">
+                <button class="tab-link active" data-tab="tab-1"><i class="fas fa-box-open"></i> Hàng dễ vỡ</button>
+                <button class="tab-link" data-tab="tab-2"><i class="fas fa-battery-full"></i> Chất lỏng / Pin</button>
+                <button class="tab-link" data-tab="tab-3"><i class="fas fa-gem"></i> Hàng giá trị cao</button>
+            </div>
+
+            <div class="tab-content-container">
+                <div id="tab-1" class="tab-content active">
+                    <h3>Hướng dẫn đóng gói Hàng dễ vỡ (Thủy tinh, Gốm sứ)</h3>
+                    <p>Sử dụng vật liệu chống sốc như xốp hơi, mút và đảm bảo hàng không di chuyển bên trong hộp.</p>
+                   <div class="video-wrapper">
+     <iframe 
+        src="https://www.youtube.com/embed/FvS1zUo1cWc?si=LIr3bTfsUSpopb9x" 
+        title="Hướng dẫn đóng gói hàng dễ vỡ" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+                </div>
+
+                <div id="tab-2" class="tab-content">
+                     <h3>Hướng dẫn đóng gói Chất lỏng / Hàng chứa Pin</h3>
+                    <p>Chai lọ cần được bịt kín, bọc trong túi nilon. Hàng chứa pin cần được dán nhãn cảnh báo đặc biệt.</p>
+                     <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZO93TdJ-kQc?si=ljSWZEZfF8hHsQWC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div id="tab-3" class="tab-content">
+                    <h3>Hướng dẫn đóng gói Hàng giá trị cao (Điện thoại, Trang sức)</h3>
+                    <p>Nên sử dụng dịch vụ khai giá, đóng gói trong hộp cứng, niêm phong cẩn thận và quay video lại quá trình đóng gói.</p>
+                     <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AL1DUSCT9Nk?si=DVi6o8e-Pncd--M0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const tabId = link.getAttribute('data-tab');
+                    tabLinks.forEach(item => item.classList.remove('active'));
+                    tabContents.forEach(item => item.classList.remove('active'));
+                    link.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

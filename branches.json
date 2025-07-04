@@ -1,0 +1,11 @@
+[
+    { "name": "Bưu cục Trung tâm Hà Nội", "lat": 21.0285, "lng": 105.8542, "status": "🔴 Đông", "hours": "7:30 - 19:00", "phone": "1900 545481" },
+    { "name": "Bưu cục Cầu Giấy", "lat": 21.0341, "lng": 105.7924, "status": "🟢 Vắng", "hours": "8:00 - 17:30", "phone": "1900 545482" },
+    { "name": "Bưu cục Thanh Xuân", "lat": 20.9951, "lng": 105.8153, "status": "🟡 Trung bình", "hours": "8:00 - 18:00", "phone": "1900 545483" },
+    { "name": "Bưu cục Hai Bà Trưng", "lat": 21.0063, "lng": 105.8624, "status": "🔴 Đông", "hours": "7:30 - 19:00", "phone": "1900 545484" },
+    { "name": "Bưu cục Đống Đa", "lat": 21.0150, "lng": 105.8200, "status": "🟡 Trung bình", "hours": "8:00 - 18:00", "phone": "1900 545485" },
+    { "name": "Bưu cục Trung tâm Sài Gòn", "lat": 10.7798, "lng": 106.7020, "status": "🔴 Đông", "hours": "7:30 - 19:00", "phone": "1900 545486" },
+    { "name": "Bưu cục Quận 3", "lat": 10.7843, "lng": 106.6845, "status": "🟡 Trung bình", "hours": "8:00 - 18:00", "phone": "1900 545487" },
+    { "name": "Bưu cục Tân Bình", "lat": 10.8030, "lng": 106.6586, "status": "🟢 Vắng", "hours": "8:00 - 17:30", "phone": "1900 545488" },
+    { "name": "Bưu cục Quận 7", "lat": 10.7297, "lng": 106.7027, "status": "🟢 Vắng", "hours": "8:00 - 17:30", "phone": "1900 545489" }
+]

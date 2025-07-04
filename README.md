@@ -4,6 +4,7 @@
 
 **🔗 Link Demo trực tiếp:** [https://vietnam-post-support.netlify.app/](https://vietnam-post-support.netlify.app/) _(Lưu ý: Tính năng GPS yêu cầu cấp quyền vị trí trên trình duyệt)_
 
+![image](https://github.com/user-attachments/assets/df7c4512-a253-4be6-9249-94a7a1422578)
 
 
 ## ✨ Các Tính Năng Nổi Bật
@@ -15,6 +16,7 @@ Dự án được xây dựng hoàn toàn bằng **HTML, CSS và JavaScript "thu
 - **Chỉ đường thời gian thực:** Vẽ tuyến đường từ vị trí người dùng đến bất kỳ bưu cục nào trên bản đồ, kèm theo bảng hướng dẫn chi tiết (khoảng cách, thời gian, các ngã rẽ).
 - **Hiển thị trực quan:** Sử dụng các marker màu sắc để thể hiện tình trạng hoạt động của bưu cục (🟢 Vắng, 🟡 Trung bình, 🔴 Đông).
 - **Công nghệ:** Tích hợp **Leaflet.js** và **Leaflet Routing Machine** với bộ não tìm đường OSRM.
+>![image](https://github.com/user-attachments/assets/ec7db737-c137-42d4-a329-b05439519184)
 
 
 
@@ -23,6 +25,7 @@ Dự án được xây dựng hoàn toàn bằng **HTML, CSS và JavaScript "thu
 - **Kho dữ liệu phong phú:** Được xây dựng với một kho kiến thức đa dạng để xử lý nhiều loại câu hỏi.
 - **Cơ chế Fallback:** Khi không nhận diện được câu hỏi, bot sẽ tự động cung cấp hotline hỗ trợ trực tiếp.
 - **Hoạt động offline:** Không cần kết nối tới API của bên thứ ba, xử lý hoàn toàn phía client.
+>![image](https://github.com/user-attachments/assets/c6757049-6f28-48a8-958c-7c281cf9c825)
 
 
 
@@ -30,6 +33,7 @@ Dự án được xây dựng hoàn toàn bằng **HTML, CSS và JavaScript "thu
 - **Phân loại rõ ràng:** Các video hướng dẫn đóng gói được chia theo từng tab chuyên biệt (Hàng dễ vỡ, Chất lỏng/Pin, Hàng giá trị cao).
 - **Giao diện Tab hiện đại:** Giúp người dùng dễ dàng chuyển đổi giữa các loại hướng dẫn.
 - **Nhúng video từ YouTube:** Tích hợp `iframe` một cách responsive.
+>![image](https://github.com/user-attachments/assets/5c76700a-85ed-401e-90f8-38e64c37cb64)
 
 
 
@@ -38,6 +42,7 @@ Dự án được xây dựng hoàn toàn bằng **HTML, CSS và JavaScript "thu
 - **Menu Hamburger:** Tự động chuyển sang menu ẩn trên thiết bị di động với hiệu ứng mượt mà.
 - **Hiệu ứng động:** Các hiệu ứng `hover`, `transition`, và `animation` được thêm vào một cách tinh tế để tăng trải nghiệm người dùng.
 - **Tái sử dụng Component:** Header và Footer được tải động bằng `fetch()` để giảm lặp code và dễ dàng bảo trì.
+>![image](https://github.com/user-attachments/assets/0385464b-f66d-4586-ac6f-04bd2d66a0b1)
 
 ## 🛠️ Công Nghệ Sử Dụng
 

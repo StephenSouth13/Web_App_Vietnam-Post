@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener('DOMContentLoaded', () => {
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
@@ -74,4 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
         return botData["fallback"];
     }
 });
-</script>
+

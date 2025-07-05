@@ -1,16 +1,50 @@
-.map-page-container { text-align: center; }
-.page-header { margin-bottom: 2rem; }
-.page-header h1 { color: var(--primary-color); margin-bottom: 0.5rem; }
-.legend { margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 20px; font-weight: 500; }
-.legend .dot { height: 15px; width: 15px; border-radius: 50%; display: inline-block; margin-right: 5px; border: 1px solid rgba(0,0,0,0.2); }
-.legend .green { background-color: #28a745; }
-.legend .yellow { background-color: #ffc107; }
-.legend .red { background-color: #dc3545; }
-#map-container { width: 100%; height: 60vh; min-height: 450px; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); overflow: hidden; }
-#map { height: 100%; width: 100%; }
+.map-page-container {
+    text-align: center;
+}
+.page-header {
+    margin-bottom: 2rem;
+}
+.page-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.legend {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+.legend .dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.dot.green { background-color: #28a745; }
+.dot.yellow { background-color: #ffc107; }
+.dot.red { background-color: #dc3545; }
+#map-container {
+    width: 100%;
+    height: 60vh;
+    min-height: 450px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+
 /* Style cho nút chỉ đường trong popup */
 .route-button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, #004680);
     color: white;
     border: none;
     padding: 8px 12px;
@@ -18,13 +52,15 @@
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    font-family: var(--font-family);
+    font-family: var(--font-family, inherit);
     font-weight: 500;
     transition: background-color 0.2s;
 }
 .route-button:hover {
     background-color: #005a9e;
 }
+
+/* Chú thích trạng thái */
 .legend-detail {
     list-style: none;
     padding: 0;
@@ -39,9 +75,41 @@
     align-items: flex-start;
     gap: 10px;
 }
+.legend-detail .dot {
+    margin-top: 5px;
+}
+.legend-detail b {
+    font-weight: 600;
+}
 .legend-desc {
     font-weight: 400;
     color: #555;
-    margin-left: 25px;
+    margin-left: 0;
     display: block;
+    font-size: 0.97em;
+    margin-top: 2px;
+}
+.legend-detail .green {
+    background-color: #28a745;
+}
+.legend-detail .yellow {
+    background-color: #ffc107;
+}
+.legend-detail .red {
+    background-color: #dc3545;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+    #map-container {
+        min-height: 300px;
+        height: 45vh;
+    }
+    .legend-detail {
+        max-width: 98vw;
+        font-size: 0.97em;
+    }
+    .page-header h1 {
+        font-size: 1.2em;
+    }
 }

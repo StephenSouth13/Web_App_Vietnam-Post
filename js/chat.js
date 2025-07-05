@@ -77,28 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
         return msgElement;
     }
 
-    async function getBotResponse(userInput) {
-        const input = userInput.toLowerCase().trim();
-        const trackingCodeMatch = input.match(/vn\d{9}/i);
-        if (trackingCodeMatch) {
-            const trackingCode = trackingCodeMatch[0].toUpperCase();
-            return await fetchTrackingInfo(trackingCode);
-        }
+   async function getBotResponse(userInput) {
+    const normalize = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-        let bestMatch = { score: 0, response: fallbackResponse };
-        botData.forEach(item => {
-            let currentScore = 0;
-            item.keywords.forEach(keyword => {
-                if (input.includes(keyword)) currentScore++;
-            });
-            if (currentScore > bestMatch.score) {
-                bestMatch = { score: currentScore, response: item.response };
-            }
-        });
-
-        await new Promise(resolve => setTimeout(resolve, 400 + Math.random() * 400));
-        return bestMatch.score > 0 ? bestMatch.response : fallbackResponse;
+    const input = normalize(userInput);
+    const trackingCodeMatch = input.match(/vn\d{9}/i);
+    if (trackingCodeMatch) {
+        const trackingCode = trackingCodeMatch[0].toUpperCase();
+        return await fetchTrackingInfo(trackingCode);
     }
+
+    let bestMatch = { score: 0, response: fallbackResponse };
+    botData.forEach(item => {
+        let currentScore = 0;
+        item.keywords.forEach(keyword => {
+            if (input.includes(normalize(keyword))) currentScore++;
+        });
+        if (currentScore > bestMatch.score) {
+            bestMatch = { score: currentScore, response: item.response };
+        }
+    });
+
+    await new Promise(resolve => setTimeout(resolve, 400 + Math.random() * 400));
+    return bestMatch.score > 0 ? bestMatch.response : fallbackResponse;
+}
+
 
     async function fetchTrackingInfo(trackingCode) {
         await new Promise(resolve => setTimeout(resolve, 1500));

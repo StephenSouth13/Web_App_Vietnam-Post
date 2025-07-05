@@ -2,7 +2,7 @@
 
 /* === BIẾN MÀU SẮC VÀ THIẾT KẾ TOÀN CỤC === */
 :root {
-    --primary-color: #f0ad4e;
+    --primary-color: #004680;
     --primary-darker: #d89334;
     --white-color: #ffffff;
     --text-color: #3d3d3d;
@@ -249,7 +249,7 @@ main {
 .status-đã-giao-thành-công { background: #5cb85c; }
 .status-giao-hàng-không-thành-công,
 .status-not-found { background: #d9534f; }
-.status-đang-hoàn-về-người-gửi { background: #f0ad4e; }
+.status-đang-hoàn-về-người-gửi { background: #004680; }
 
 .tracking-history {
     list-style: none; padding-left: 0; position: relative; margin-top: 1rem;

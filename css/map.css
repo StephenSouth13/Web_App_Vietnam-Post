@@ -25,3 +25,23 @@
 .route-button:hover {
     background-color: #005a9e;
 }
+.legend-detail {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+.legend-detail li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.legend-desc {
+    font-weight: 400;
+    color: #555;
+    margin-left: 25px;
+    display: block;
+}

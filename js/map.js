@@ -1,3 +1,4 @@
+// --- JavaScript Logic for the Map ---
 document.addEventListener('DOMContentLoaded', function () {
     // ---- PHẦN 1: KHỞI TẠO VÀ CẤU HÌNH ----
 
@@ -34,24 +35,23 @@ document.addEventListener('DOMContentLoaded', function () {
         routingControl = L.Routing.control({
             waypoints: [ L.latLng(startLatLng), L.latLng(endLatLng) ],
             routeWhileDragging: false,
-            show: true, // Hiển thị bảng chỉ dẫn chi tiết
+            show: true,
             addWaypoints: false,
             lineOptions: { styles: [{ color: '#004680', opacity: 0.9, weight: 7 }] },
-            // Tùy chỉnh ngôn ngữ
-            router: new L.Routing.OSRMv1({
-                language: 'vi'
-            }),
-            // Ẩn marker mặc định A, B vì chúng ta đã có marker riêng
+            router: new L.Routing.OSRMv1({ language: 'vi' }),
             createMarker: function() { return null; } 
         }).addTo(map);
 
         mapInstruction.innerHTML = `Đang chỉ đường tới: <b>${branchName}</b>.`;
     }
 
-    // Hàm hiển thị các bưu cục lên bản đồ
+    // Hàm hiển thị các bưu cục lên bản đồ từ file JSON
     async function displayBranches() {
         try {
             const response = await fetch('branches.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const branches = await response.json();
             
             branches.forEach(branch => {
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const marker = L.marker([branch.lat, branch.lng], { icon: icon }).addTo(map);
                 
-                // Tạo nội dung cho popup
                 const popupContent = `
                     <b>${branch.name}</b><br>
                     ${branch.address}<br>
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } catch (error) {
             console.error("Lỗi khi tải dữ liệu bưu cục:", error);
-            mapInstruction.innerText = "Không thể tải được danh sách bưu cục.";
+            mapInstruction.innerText = "Không thể tải được danh sách bưu cục. Vui lòng kiểm tra lại.";
         }
     }
 
@@ -88,35 +87,32 @@ document.addEventListener('DOMContentLoaded', function () {
                     lng: position.coords.longitude
                 };
                 
-                map.setView(userLatLng, 14); // Zoom vào vị trí người dùng
+                map.setView(userLatLng, 14);
                 userMarker = L.marker(userLatLng, { icon: icons.blue }).addTo(map)
                     .bindPopup("<b>Vị trí của bạn</b>").openPopup();
                 
-                mapInstruction.innerText = "Bấm vào một bưu cục hoặc nút 'Chỉ đường' để xem tuyến đường.";
+                mapInstruction.innerText = "Bấm vào một bưu cục để xem chi tiết và tìm đường đi.";
             },
             (error) => {
                 mapInstruction.innerText = "Không thể lấy vị trí của bạn. Vui lòng cấp quyền và tải lại trang.";
-                console.error("Geolocation error:", error.message);
+                console.error("Lỗi định vị:", error.message);
             }
         );
     } else {
         mapInstruction.innerText = "Trình duyệt của bạn không hỗ trợ định vị GPS.";
     }
     
-    // Thêm sự kiện click cho các nút "Chỉ đường" (sử dụng event delegation)
+    // Thêm sự kiện click cho các nút "Chỉ đường"
     map.on('popupopen', function(e) {
         const routeBtn = e.popup._container.querySelector('.route-button');
         if (routeBtn) {
             routeBtn.addEventListener('click', function() {
                 if (userMarker) {
                     const start = userMarker.getLatLng();
-                    const end = {
-                        lat: this.dataset.lat,
-                        lng: this.dataset.lng
-                    };
+                    const end = { lat: this.dataset.lat, lng: this.dataset.lng };
                     const name = this.dataset.name;
                     drawRoute(start, end, name);
-                    e.popup._closeButton.click(); // Đóng popup sau khi bấm nút
+                    e.popup._closeButton.click();
                 } else {
                     alert("Vui lòng cho phép truy cập vị trí để sử dụng tính năng này.");
                 }
